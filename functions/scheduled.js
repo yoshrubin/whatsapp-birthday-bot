@@ -6,4 +6,10 @@ exports.initScheduledJobs = () => {
   });
 
   everyMinute.start();
+
+  const checkBirthdayToday = cron.schedule(" * * *", () => {
+    // add logic to check for birthdays
+  });
+
+  checkBirthdayToday.start();
 };
